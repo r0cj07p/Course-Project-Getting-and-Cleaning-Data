@@ -48,11 +48,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ##2.  Extract only the measurements on the mean and standard deviation for each measurement.
 
-### Upon examining the names of the columns in the merged data set, using the "names(combined_data)" function, it is  observed that all
-### column headers related to the mean for each measurement contain the character string "mean()" and all of the column headers
-### related to the standard deviation for each measurement contain the character string "std()".  Use "grepl" functions to
-### automatically select columns with those character strings, along with the columns identifying the subject and the activity
-### performed, to include in the final data set.
+### Upon examining the names of the columns in the merged data set, using the "names(combined_data)" function, it is  observed that all column headers related to the mean for each measurement contain the character string "mean()" and all of the column headers related to the standard deviation for each measurement contain the character string "std()".  Use "grepl" functions to automatically select columns with those character strings, along with the columns identifying the subject and the activity erformed, to include in the final data set.
 
     merged_colnames = colnames(combined_data) 
     final_variables <- (grepl("Subject_ID",merged_colnames) | 
